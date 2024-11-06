@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
         remove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                count--;
-                if(!(count<0)){
+                if(count>0){
+                    count--;
                     likeCount.setText(String.valueOf(count) + " polubień");
                 } else {
                     Toast.makeText(getApplicationContext(), "Nie może być mniej niż 0 polubień", Toast.LENGTH_SHORT).show();
